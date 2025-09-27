@@ -43,8 +43,8 @@ def get_distributions(n):
         if dist in distributions
     }
     df = pd.DataFrame(selected_data)
-    df_long = pd.melt(df, var_name="distribution", value_name="value")
-    return df_long
+    long = pd.melt(df, var_name="distribution", value_name="value")
+    return long
 
 
 def plot_distributions(df, colors):

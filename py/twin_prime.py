@@ -87,12 +87,12 @@ fig.show()
 grid_size = upper_limit
 max_num = grid_size * grid_size
 numbers = np.arange(1, max_num + 1).reshape((grid_size, grid_size))
-colors = np.vectorize(get_colors)(numbers)
+colors_list = np.vectorize(get_colors)(numbers)
 x_coords, y_coords = np.meshgrid(range(grid_size), range(grid_size))
 y_coords = grid_size - 1 - y_coords
 x_flat = x_coords.flatten()
 y_flat = y_coords.flatten()
-colors_flat = colors.flatten()
+colors_flat = colors_list.flatten()
 numbers_flat = numbers.flatten()
 
 fig = go.Figure(

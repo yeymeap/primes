@@ -1,14 +1,14 @@
 def user_values():
     while True:
         try:
-            number = int(input("Number to check for prime: "))
-            if number < 1:
+            n = int(input("Number to check for prime: "))
+            if n < 1:
                 print("Please enter a value greater than 0!")
             else:
                 break
         except ValueError:
             print("Please enter a valid integer!")
-    return number
+    return n
 
 
 def is_prime(n):  # checks if input number is prime based on 6k +- 1 formula

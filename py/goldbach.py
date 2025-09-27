@@ -1,14 +1,14 @@
 def user_values():
     while True:
         try:
-            decomposition = int(input("Number for decomposition: "))
-            if decomposition <= 5:
+            decomp = int(input("Number for decomposition: "))
+            if decomp <= 5:
                 print("Please enter a value greater than 5!")
             else:
                 break
         except ValueError:
             print("Please enter a valid integer!")
-    return decomposition
+    return decomp
 
 
 def is_prime(n):  # checks if input number is prime based on 6k +- 1 formula

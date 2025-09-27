@@ -1,6 +1,4 @@
-from matplotlib.patches import ConnectionStyle
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -21,20 +19,20 @@ def user_values():
 
 
 def collatz_rule(n):
-    collatz_sequence = [
+    sequence = [
         n,
     ]
     while n > 1:
         if n % 2 == 0:
             n //= 2
-            collatz_sequence.append(n)
+            sequence.append(n)
         else:
             n *= 3
             n += 1
-            collatz_sequence.append(n)
-    print(" -> ".join(str(n) for n in collatz_sequence))
-    print(f"Steps: {len(collatz_sequence) - 1}")
-    return collatz_sequence
+            sequence.append(n)
+    print(" -> ".join(str(n) for n in sequence))
+    print(f"Steps: {len(sequence) - 1}")
+    return sequence
 
 
 def draw_collatz_network(sequence):
